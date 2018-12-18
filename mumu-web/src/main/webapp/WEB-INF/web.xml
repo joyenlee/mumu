@@ -11,6 +11,7 @@
 	<context-param><!-- 此处的context指的是web context -->
 		<param-name>contextConfigLocation</param-name>
 		<!-- 此处的context指的是Spring IoC容器 -->
+		<!-- 可以将这里的配置文件作为配置应用组件的地方 -->
 		<param-value>/WEB-INF/applicationContext.xml</param-value>
 	</context-param>
 	<!-- 配置ServletContextListener用以根据配置文件生成Spring IoC容器 -->
@@ -18,18 +19,23 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
-	<!-- 配置Spring MVC的DispatcherServlet -->
+	<!-- 配置Spring MVC的DispatcherServlet，它将初始化Spring MVC的各个组件 -->
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<!-- 也可以在这配置Spring IoC配置文件路径（在Servlet初始化之时初始化Spring IoC容器） -->
 		<!-- 注意：如果不配置此初始化参数，Spring MVC框架会根据servlet-name（这里是dispatcher）， 默认找/WEB-INF/dispatcher-servlet.xml作为配置文件加载 -->
-		<!-- <init-param> <param-name>contextConfigLocation</param-name> <param-value>classpath:applicationContext.xml</param-value> 
+		<!-- 可以将此配置文件作为配置Spring MVC各组件的地方 -->
+		<!-- <init-param> <param-name>contextConfigLocation</param-name> <param-value>classpath:springmvc.xml</param-value> 
 			</init-param> -->
 		<init-param>
-			<param-name>spring.profiles.active</param-name>
+			<param-name>spring.profiles.default</param-name>
 			<param-value>dev</param-value>
 		</init-param>
+<!-- 		<init-param>
+			<param-name>spring.profiles.active</param-name>
+			<param-value>prod</param-value>
+		</init-param> -->
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>

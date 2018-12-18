@@ -16,7 +16,7 @@
 	<mvc:annotation-driven />
 
 	<!-- 定义自动扫描来装载bean的包 -->
-	<context:component-scan base-package="lyy.web.*" />
+	<context:component-scan base-package="lyy.mumu.web.*" />
 
 	<!-- 定义视图解析器 -->
 	<!-- 找到Web应用目录下/WEB-INF/JSP文件夹，且文件结尾为jsp的文件作为映射 -->
