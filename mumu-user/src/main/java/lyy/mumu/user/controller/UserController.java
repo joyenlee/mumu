@@ -20,6 +20,11 @@ public class UserController {
 		return "hello world!";
 	}
 
+	/**
+	 * 登录，可以通过手机号、用户名或者电子邮箱来登录
+	 * 
+	 * @return
+	 */
 	@RequestMapping("/login")
 	public ModelAndView login() {
 		System.out.println("AAAAAAAAAAAAAAAAAAAAA");
@@ -30,5 +35,23 @@ public class UserController {
 			mv.setViewName("error");
 		}
 		return mv;
+	}
+	
+	/**
+	 * 注册，可以通过手机号、用户名或者电子邮箱来注册
+	 * @return
+	 */
+	@RequestMapping("register")
+	public String register() {
+		return "register";
+	}
+	
+	/**
+	 * 实名认证，通过上传身份证照片和刷脸进行比对
+	 * @return
+	 */
+	@RequestMapping("authenticateByRealName")
+	public String authenticateByRealName() {
+		return "authenticateByRealName";
 	}
 }
