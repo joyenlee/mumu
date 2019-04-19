@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>登录成功</title>
+</head>
+<body>
+	<header>
+		<h1>登录成功！</h1>
+	</header>
+	<main>
+		<span th:text="${counter.cnt}"></span>
+		
+		<form method="post" action="login-success">
+			<input type="text" th:value="${counter.cnt}" name="cnt" />
+			<input type="submit" />
+		</form>
+	</main>
+	<footer>
+	</footer>
+	
+</body>
+</html>
