@@ -2,13 +2,28 @@
 <html lang="zh-cmn-hans">
 <head>
 	<meta charset="utf-8" />
-	<title>登录</title>
+	<title>用户登录-木木租房平台</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/login.css" />
 </head>
 <body>
-	<header></header>
-	<main>
-		<p>static目录中的login.html</p>
-	</main>
-	<footer></footer>
+<div class="page">
+	<header class="masthead" role="banner">
+		<p class="logo center-align"><a href="/home.html"><img src="img/logo.png" alt="木木租房平台" /></a></p>
+	</header><!-- end masthead -->
+	
+	<main role="main">
+		<form>
+			<p class="row center-align"><input type="text" name="username" placeholder="用户名" maxlength="20" required autofocus /></p>
+			<p class="row center-align"><input type="password" name="password" placeholder="密码" maxlength="20" required /></p>
+			<p class="row center-align"><input type="submit" value="登        录" /></p>
+		</form>
+	</main><!-- end main -->
+	
+	<footer class="footer" role="contentinfo">
+	</footer><!-- end page footer -->
+</div> <!-- end page -->
 </body>
 </html>

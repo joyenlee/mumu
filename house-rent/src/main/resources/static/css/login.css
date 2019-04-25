@@ -1,0 +1,22 @@
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+.center-align {
+	text-align: center;
+}
+
+.logo {
+	background-color: lime;
+}
+
+input {
+	box-sizing: border-box;
+	padding: 8px;
+	width: 258px;
+}
