@@ -1,0 +1,40 @@
+/* .box{
+    position:relative;
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    border: 2px solid black;
+}
+.out{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}    
+.in{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    margin-left: -50%;
+    margin-top: -50%;
+} */
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+.box{
+    width: 200px;
+    background-color: pink;    
+}
+.list{
+    overflow: hidden;
+    margin-right: -10px;
+}
+.in{
+    float: left;
+    width: 60px;
+    height: 100px;
+    background-color: lightgreen;
+    margin-right: 10px;
+}

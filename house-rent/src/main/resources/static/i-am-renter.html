@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-hans">
 <head>
 	<meta charset="utf-8">
-	<title>木木租房平台</title>
+	<title>我是租客-木木租房平台</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/i-am-renter.css" />
 </head>
 <body>
-	<header role="banner">
-		<a href=""><img src="" alt="木木"/></a>
-		<form method="post" action="">
-			<select>
-				<option>北京</option>
-				<option>上海</option>
-				<option>广州</option>
-			</select>
-			<input type="search" placeholder="请输入区域、商圈或小区名开始找房"/>
-			<input type="submit"/>
-		</form>
-		<nav>
-			<ul>
-				<li><a href="">我是租客</a></li>
+<div class="page">
+	<header class="masthead" role="banner">
+		<p class="logo"><a href="/home.html"><img src="img/logo.png" alt="木木租房平台" /></a></p>
+		<nav role="navigation">
+			<ul class="nav-main">
+				<li><a href="" class="current-page">我是租客</a></li>
 				<li><a href="">我是业主</a></li>
 				<li><a href="">我是房管</a></li>
 				<li><a href="">关于我们</a></li>
@@ -28,11 +24,56 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<div>
-			<h2>过滤器</h2>
+	<div class="container clearfix">
+	<main role="main">
+		<header>
+			<h2>已为您找到<span th:text="${result}">0</span>套租房</h2>
+			<nav>
+				<ul>
+					<li><a href="">综合排序</a></li>
+					<li><a href="">最新上架</a></li>
+					<li><a href="">价格</a></li>
+					<li><a href="">面积</a></li>
+				</ul>
+			</nav>
+		</header>
+		<ul>
+			<li>
+				<img src="" alt="10图"/>
+				<h4>整租 · 高楼层双东向两居室 观小区花园 无遮挡 户型方正</h4>
+				<p>朝阳-东大桥-圣世一品 / 157m<sup>2</sup> / 东 / 2室1厅1卫</p>
+				<p>3天前发布</p>
+				<p>24000元/月</p>
+				<p>亮点：近地铁/精装/集中供暖/随时看房</p>
+				<p><a href="">联系房管</a></p>
+			</li>
+			<li>
+				<img src="" alt="10图"/>
+				<h4>整租 · 高楼层双东向两居室 观小区花园 无遮挡 户型方正</h4>
+				<p>朝阳-东大桥-圣世一品 / 157m<sup>2</sup> / 东 / 2室1厅1卫</p>
+				<p>3天前发布</p>
+				<p>24000元/月</p>
+				<p>亮点：近地铁/精装/集中供暖/随时看房</p>
+				<p><a href="">联系房管</a></p>
+			</li>
+		</ul>
+		<footer></footer>
+	</main><!-- end main -->
+	<div class="sidebar">
+		<div class="search">
+			<form method="post" action="">
+				<select>
+					<option>北京</option>
+					<option>上海</option>
+					<option>广州</option>
+				</select>
+				<input type="search" placeholder="请输入区域、商圈或小区名开始找房"/>
+				<input type="submit"/>
+			</form>
+		</div>
+		<div class="condition">
 			<section>
-				<h3>区域</h3>
+				<label>区域</label>
 				<ul>
 					<li><a href="">东城</a></li>
 					<li><a href="">西城</a></li>
@@ -54,7 +95,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>方式</h3>
+				<label>方式</label>
 				<ul>
 					<li><a href="">不限</a></li>
 					<li><a href="">整租</a></li>
@@ -62,7 +103,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>租金</h3>
+				<label>租金</label>
 				<ul>
 					<li><a href="">不限</a></li>
 					<li><a href="">&lt;=1500元</a></li>
@@ -73,7 +114,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>户型</h3>
+				<label>户型</label>
 				<ul>
 					<li><a href="">卧室</a></li>
 					<li><a href="">客厅</a></li>
@@ -84,8 +125,8 @@
 					<li><a href="">loft</a></li>
 				</ul>
 			</section>
-			<section>
-				<h3>朝向</h3>
+<!--			<section>
+				<label>朝向</label>
 				<ul>
 					<li><a href="">东</a></li>
 					<li><a href="">南</a></li>
@@ -95,7 +136,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>楼层</h3>
+				<label>楼层</label>
 				<ul>
 					<li><a href="">高</a></li>
 					<li><a href="">中</a></li>
@@ -103,7 +144,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>年代</h3>
+				<label>年代</label>
 				<ul>
 					<li><a href="">10年代</a></li>
 					<li><a href="">00年代</a></li>
@@ -112,7 +153,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>中介费</h3>
+				<label>中介费</label>
 				<ul>
 					<li><a href="">月租的10%</a></li>
 					<li><a href="">月租的50%</a></li>
@@ -120,14 +161,14 @@
 				</ul>
 			</section>
 			<section>
-				<h3>押金</h3>
+				<label>押金</label>
 				<ul>
 					<li><a href="">无押金</a></li>
 					<li><a href="">一个月租金</a></li>
 				</ul>
 			</section>
 			<section>
-				<h3>支付方式</h3>
+				<label>支付方式</label>
 				<ul>
 					<li><a href="">月付</a></li>
 					<li><a href="">季付</a></li>
@@ -135,21 +176,21 @@
 				</ul>
 			</section>
 			<section>
-				<h3>退房</h3>
+				<label>退房</label>
 				<ul>
 					<li><a href="">找到下家随时可退</a></li>
 				</ul>
 			</section>
 			<section>
-				<h3>装修</h3>
+				<label>装修</label>
 				<ul>
 					<li><a href="">普通装修</a></li>
 					<li><a href="">精装修</a></li>
 					<li><a href="">豪华装修</a></li>
 				</ul>
 			</section>
-			<section>
-				<h3>配套设施</h3>
+ 			<section>
+				<label>配套设施</label>
 				<ul>
 					<li><a href="">水</a></li>
 					<li><a href="">电</a></li>
@@ -166,7 +207,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>家电</h3>
+				<label>家电</label>
 				<ul>
 					<li><a href="">烟机灶具</a></li>
 					<li><a href="">热水器</a></li>
@@ -176,7 +217,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>家具</h3>
+				<label>家具</label>
 				<ul>
 					<li><a href="">床</a></li>
 					<li><a href="">衣柜</a></li>
@@ -188,14 +229,14 @@
 				</ul>
 			</section>
 			<section>
-				<h3>环境</h3>
+				<label>环境</label>
 				<ul>
 					<li><a href="">噪音</a></li>
 					<li><a href=""></a></li>
 				</ul>
 			</section>
 			<section>
-				<h3>交通</h3>
+				<label>交通</label>
 				<ul>
 					<li><a href="">地铁</a></li>
 					<li><a href="">公交</a></li>
@@ -204,7 +245,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>商业</h3>
+				<label>商业</label>
 				<ul>
 					<li><a href="">龙湖</a></li>
 					<li><a href="">凯德mall</a></li>
@@ -213,7 +254,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>教育</h3>
+				<label>教育</label>
 				<ul>
 					<li><a href="">早教</a></li>
 					<li><a href="">幼儿园</a></li>
@@ -223,7 +264,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>医疗</h3>
+				<label>医疗</label>
 				<ul>
 					<li><a href="">三甲医院</a></li>
 					<li><a href="">药店</a></li>
@@ -231,52 +272,16 @@
 				</ul>
 			</section>
 			<section>
-				<h3>对租客要求</h3>
+				<label>对租客要求</label>
 				<ul>
 					<li><a href="">宠物</a></li>
 					<li><a href="">抽烟喝酒</a></li>
 				</ul>
-			</section>
+			</section> -->
 			<p><a href="">清空条件</a></p>
 		</div>
-		
-		<div>
-			<header>
-				<h2>已为您找到<span th:text="${result}">0</span>套租房</h2>
-				<nav>
-					<ul>
-						<li><a href="">综合排序</a></li>
-						<li><a href="">最新上架</a></li>
-						<li><a href="">价格</a></li>
-						<li><a href="">面积</a></li>
-					</ul>
-				</nav>
-			</header>
-			<div>
-				<ul>
-					<li>
-						<img src="" alt="10图"/>
-						<h4>整租 · 高楼层双东向两居室 观小区花园 无遮挡 户型方正</h4>
-						<p>朝阳-东大桥-圣世一品 / 157m<sup>2</sup> / 东 / 2室1厅1卫</p>
-						<p>3天前发布</p>
-						<p>24000元/月</p>
-						<p>亮点：近地铁/精装/集中供暖/随时看房</p>
-						<p><a href="">联系房管</a></p>
-					</li>
-					<li>
-						<img src="" alt="10图"/>
-						<h4>整租 · 高楼层双东向两居室 观小区花园 无遮挡 户型方正</h4>
-						<p>朝阳-东大桥-圣世一品 / 157m<sup>2</sup> / 东 / 2室1厅1卫</p>
-						<p>3天前发布</p>
-						<p>24000元/月</p>
-						<p>亮点：近地铁/精装/集中供暖/随时看房</p>
-						<p><a href="">联系房管</a></p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</main>
-	<aside>
+	</div><!-- end sidebar -->
+<!-- 	<aside>
 		<h2>我租过的房</h2>
 		<ul>
 			<li>
@@ -290,7 +295,9 @@
 				<p>状态：已入住（续签N次）、取消签约、已解约</p>
 			</li>
 		</ul>
-	</aside>
-	<footer></footer>
+	</aside> -->
+	</div><!-- end container -->
+ 	<footer></footer>
+</div>
 </body>
 </html>
