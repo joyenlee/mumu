@@ -68,8 +68,6 @@ img {
 -------------------------------------------------- */
 body {
 	font: 100%/1.2 Georgia, "Times New Roman", serif;
-	padding-left: 15px;
-	padding-right: 15px;
 }
 
 * {
@@ -81,17 +79,11 @@ body {
 h1 {
 	color: #212121;
 	font-family: 'Lato', sans-serif;
-	font-size: 2.25em;
+	font-size: 3.25em;
 	font-weight: 300;
 	letter-spacing: -2px;
 	line-height: .975;
 	margin-bottom: .4125em;
-}
-
-.nav-main a {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 700;
-	text-transform: uppercase;
 }
 
 ul,
@@ -119,35 +111,57 @@ img {
 	max-width: 960px;
 }
 
-/* MASTHEAD
-------------------------------------------- */
+/* Masthead */
 .masthead {
-	padding-top: 12px;
-}
-
-.logo {
-	font-size: 10px;
-	line-height: 1;
-	margin-bottom: -8px;
-	margin-top: 0;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 110px;
+    padding-top: 10px;
+    z-index: 999;
+    overflow: hidden;
+    background: red;
+    text-align: center;
 }
 
 .logo,
-.nav-main li {
-	text-align: center;
+.nav-main {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
 }
 
-/* ::: Main Navigation ::: */
+.logo {
+	margin-bottom: 8px;
+	text-align: left;
+	font-size: 10px;
+	line-height: 1;
+}
+
 .nav-main {
-	border-bottom: 1px solid #c7c7c8;
-	border-top: 5px solid #019443;
-	margin-top: 0;
+	border-top: 1px solid #c7c7c8;
+	border-bottom: 5px solid #019443;
 	padding: .45em 0 .5em;
 }
 
+.nav-main li {
+	display: inline-block;
+	border-left: 1px solid #c8c8c8;
+	text-align: left;
+}
+
+.nav-main li:first-child {
+	border-left: none;
+}
+
 .nav-main a {
-	color: #292929;
+	display: inline-block;
+	padding-left: .5em 1.15em .5em 1.4em;
 	font-size: 1.125em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	color: #292929;
+	text-transform: uppercase;
 }
 
 .nav-main a:hover {
@@ -161,123 +175,44 @@ img {
 	cursor: default;
 }
 
-/* MAIN CONTENT
-------------------------------------------- */
+.nav-main li:last-child a {
+	padding-right: 0;
+}
 
+/* Main Content */
+.spacer {
+	height:110px;
+}
+
+.container {
+	background: url(../img/bg.png) repeat-y 65.938% 0;
+	padding-bottom: 1.9375em;
+}
+	
+main {
+	float: left;
+	width: 62.5%;
+}
+
+/* Sidebar */
 /* SIDEBAR
 ------------------------------------------- */
 .sidebar {
 	margin-top: 60px;
 }
-
-/* =================== MEDIA QUERIES ========================= */
-/* 320+
-----------------------------------------------*/
-@media only screen and (min-width: 20em) {
-	/* Masthead */
-	.nav-main li {
-		display: inline-block;
-		border-left: 1px solid #c8c8c8;
-		text-align: left;
-	}
-	
-	.nav-main li:first-child {
-		border-left: none;
-	}
-	
-	.nav-main li:last-child a {
-		padding-right: 0;
-	}
-	
-	.nav-main a {
-		display: inline-block;
-		font-size: 1em;
-		padding: .5em .9em .5em 1.15em
-	}
+.sidebar {
+	float: right;
+	margin-top: 1.875em;
+	width: 31.25%;
 }
 
-/* 480+
--------------------------------------------------*/
-@media only screen and (min-width: 30em) {
-	/* Masthead */
-	.masthead {
-		position: relative;
-	}
-	
-	.logo {
-		margin-bottom: 8px;
-		text-align: left;
-	}
-	
-	.nav-main a {
-		font-size: 1.125em;
-		padding-left: 1.4em;
-		padding-right: 1.15em;
-	}
-	
-	.nav-main {
-		margin: 0;
-		position: absolute;
-		right: -3px;
-		top: 41px;
-	}
-	
-	/* Main Content */
+.condition li {
+	display: inline-block;
 }
 
-/* 480-767-only
----------------------------------------------- */
-@media only screen and (min-width: 30em) and (max-width: 47.9375em) {
-	
-}
+/* Page Footer */
 
-/* 600-767-only
----------------------------------------------- */
-@media only screen and (min-width: 37.5em) and (max-width: 47.9375em) {
-	
-}
 
-/* 768+
----------------------------------------------- */
-@media only screen and (min-width: 48em) {
-	h1 {
-		font-size: 3.25em;
-	}
-	
-	/* Masthead */
-	.masthead {
-		padding-top: 10px;
-	}
-	
-	.nav-main {
-		margin-bottom: 0;
-	}
-	
-	/* Main Content */
-	.container {
-		background: url(../img/bg.png) repeat-y 65.938% 0;
-		padding-bottom: 1.9375em;
-	}
-	
-	main {
-		float: left;
-		width: 62.5%;
-	}
-	
-	/* Sidebar */
-	.sidebar {
-		float: right;
-		margin-top: 1.875em;
-		width: 31.25%;
-	}
-	
-	.condition li {
-		display: inline-block;
-	}
-	
-	/* Page Footer */
-}
-/* --- end media queries ---- */
 
 /* html5boilerplate.com Clearfix
 --------------------------------- */

@@ -9,57 +9,26 @@
 	<link rel="stylesheet" href="css/i-am-renter.css" />
 </head>
 <body>
-<div class="page">
 	<header class="masthead" role="banner">
 		<p class="logo"><a href="/home.html"><img src="img/logo.png" alt="木木租房平台" /></a></p>
-		<nav role="navigation">
-			<ul class="nav-main">
-				<li><a href="" class="current-page">我是租客</a></li>
-				<li><a href="">我是业主</a></li>
-				<li><a href="">我是房管</a></li>
-				<li><a href="">关于我们</a></li>
-				<li><a href="">下载APP</a></li>
-				<li><a href="">用户中心</a></li>
-				<li><a href="">登录/退出</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div class="container clearfix">
-	<main role="main">
-		<header>
-			<h2>已为您找到<span th:text="${result}">0</span>套租房</h2>
-			<nav>
-				<ul>
-					<li><a href="">综合排序</a></li>
-					<li><a href="">最新上架</a></li>
-					<li><a href="">价格</a></li>
-					<li><a href="">面积</a></li>
-				</ul>
-			</nav>
-		</header>
-		<ul>
-			<li>
-				<img src="" alt="10图"/>
-				<h4>整租 · 高楼层双东向两居室 观小区花园 无遮挡 户型方正</h4>
-				<p>朝阳-东大桥-圣世一品 / 157m<sup>2</sup> / 东 / 2室1厅1卫</p>
-				<p>3天前发布</p>
-				<p>24000元/月</p>
-				<p>亮点：近地铁/精装/集中供暖/随时看房</p>
-				<p><a href="">联系房管</a></p>
-			</li>
-			<li>
-				<img src="" alt="10图"/>
-				<h4>整租 · 高楼层双东向两居室 观小区花园 无遮挡 户型方正</h4>
-				<p>朝阳-东大桥-圣世一品 / 157m<sup>2</sup> / 东 / 2室1厅1卫</p>
-				<p>3天前发布</p>
-				<p>24000元/月</p>
-				<p>亮点：近地铁/精装/集中供暖/随时看房</p>
-				<p><a href="">联系房管</a></p>
-			</li>
+		<ul class="nav-main">
+			<li><a href="" class="current-page">我是租客</a></li>
+			<li><a href="">我是业主</a></li>
+			<li><a href="">我是房管</a></li>
+			<li><a href="">关于我们</a></li>
+			<li><a href="">下载APP</a></li>
+			<li><a href="">用户中心</a></li>
+			<li><a href="">登录/退出</a></li>
 		</ul>
-		<footer></footer>
-	</main><!-- end main -->
-	<div class="sidebar">
+	</header>
+	
+	<div class="spacer">
+	</div>
+	
+	<div class="container clearfix">
+	<div class="left">
+	</div>
+	<div class="right">
 		<div class="search">
 			<form method="post" action="">
 				<select>
@@ -280,24 +249,43 @@
 			</section> -->
 			<p><a href="">清空条件</a></p>
 		</div>
-	</div><!-- end sidebar -->
-<!-- 	<aside>
-		<h2>我租过的房</h2>
+	</div><!-- end right -->
+	<main role="main">
+		<header>
+			<h2>已为您找到<span th:text="${result}">0</span>套租房</h2>
+			<nav>
+				<ul>
+					<li><a href="">综合排序</a></li>
+					<li><a href="">最新上架</a></li>
+					<li><a href="">价格</a></li>
+					<li><a href="">面积</a></li>
+				</ul>
+			</nav>
+		</header>
 		<ul>
 			<li>
-				<h3>整租 · 高楼层双东向两居室 观小区花园 无遮挡 户型方正</h3>
+				<img src="" alt="10图"/>
+				<h4>整租 · 高楼层双东向两居室 观小区花园 无遮挡 户型方正</h4>
 				<p>朝阳-东大桥-圣世一品 / 157m<sup>2</sup> / 东 / 2室1厅1卫</p>
-				<p><a href="">签约</a></p>
+				<p>3天前发布</p>
+				<p>24000元/月</p>
+				<p>亮点：近地铁/精装/集中供暖/随时看房</p>
+				<p><a href="">联系房管</a></p>
 			</li>
 			<li>
-				<h3>整租 · 高楼层双东向两居室 观小区花园 无遮挡 户型方正</h3>
+				<img src="" alt="10图"/>
+				<h4>整租 · 高楼层双东向两居室 观小区花园 无遮挡 户型方正</h4>
 				<p>朝阳-东大桥-圣世一品 / 157m<sup>2</sup> / 东 / 2室1厅1卫</p>
-				<p>状态：已入住（续签N次）、取消签约、已解约</p>
+				<p>3天前发布</p>
+				<p>24000元/月</p>
+				<p>亮点：近地铁/精装/集中供暖/随时看房</p>
+				<p><a href="">联系房管</a></p>
 			</li>
 		</ul>
-	</aside> -->
+		<footer></footer>
+	</main><!-- end main -->
+
 	</div><!-- end container -->
  	<footer></footer>
-</div>
 </body>
 </html>

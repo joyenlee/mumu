@@ -1,22 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="css/test.css" />
+<meta http-equiv="cache-control" content="no-cache" />
+<link rel="stylesheet" href="css/test.css" />
 </head>
 <body>
-<!-- <div class="box">
-    <div class="out">
-        <div class="in">测试内容</div>    
-    </div>    
-</div> -->
+	<header class="masthead" role="banner">
+		<p class="logo">
+			<a href="/home.html"><img src="img/logo.png" alt="木木租房平台" /></a>
+		</p>
+		<ul class="nav-main">
+			<li><a href="" class="current-page">我是租客</a></li>
+			<li><a href="">我是业主</a></li>
+			<li><a href="">我是房管</a></li>
+			<li><a href="">关于我们</a></li>
+			<li><a href="">下载APP</a></li>
+			<li><a href="">用户中心</a></li>
+			<li><a href="">登录/退出</a></li>
+		</ul>
+	</header>
 
+	<div class="container">
+		<div class="left">Left</div>
+		<div class="main">
+			<p>This is an experimental layout and untested in a real
+				situation but preliminary results look good.</p>
+			<p>The header and footer need to be a fixed height and are
+				therefore not suited to large amounts of fluid content.</p>
+			<p>The code comments for ie are documented below as they needed
+				to be removed from the code for ie mac</p>
+			<p>
+				* html, * html body{<br /> overflow:hidden;/* remove scroll
+				mechanism from body*/<br /> padding:50px 0;/* for ie5 and 5.5.*/<br />
+				margin:-50px 0;<br /> padd\ing:0;<br /> margin:0;<br /> }
+			</p>
+			<p>
+				* html #outer { <br /> overflow:auto;/* this is basically the root
+				element now*/<br /> height:100%;<br /> /* we need to make ie5 jump
+				the next style block ( contain-all) so we use the voice hack*/<br />
+				voice-family: "\"}\""; voice-family:inherit; <br /> }<br /> * html
+				#contain-all{/* must contain all content except for top and bottom
+				bars - ie5 doesnt want this so jumps it as mentioned above*/<br />
+				position:absolute;/* due to a bug in ie6 where children of elements
+				that have overflow defined behave as those they are fixed*/<br />
+				overflow-y:scroll;<br /> width:100%;<br /> height:100%;<br />
+				z-index:1;<br /> }<br />
+			</p>
+			<p></p>
+			<p>some text to wrap : some text to wrap : some text to cause
+				scrolling : : some text to wrap : some text to wrap : some text to
+				cause scrolling : : some text to wrap : some text to wrap : some
+				text to cause scrolling : : some text to wrap : some text to wrap :
+				some text to cause scrolling : : some text to wrap : some text to
+				wrap : some text to cause scrolling : : some text to wrap : some
+				text to wrap :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>some text to cause scrolling :</p>
+			<p>Last bit of text</p>
+			
+		</div>
 
-<div class="box">
-    <ul class="list">
-        <li class="in">1</li>
-        <li class="in">2</li>
-        <li class="in">3</li>
-    </ul>    
-</div>
+		<div class="right">
+			<div class="right-content">
+				<form method="post" action="">
+					<select>
+						<option>北京</option>
+						<option>上海</option>
+						<option>广州</option>
+					</select> 
+					<input type="search" placeholder="请输入区域、商圈或小区名开始找房" /> 
+					<input type="submit" />
+				</form>
+			</div>
+		</div>
+		<!-- end right -->
+	</div>
+	<!-- end container -->
+	<footer>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa</footer>
 </body>
 </html>
