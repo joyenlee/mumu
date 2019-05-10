@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+<head>
+	<meta charset="utf-8">
+	<title>用户登录-木木租房平台</title>
+</head>
+<body>
+	<header role="banner">
+		<div class="banner">
+			<a href="#"><img src="../img/logo.png" width=100 height=50 /></a>
+		</div>
+	</header>
+	
+	<main role="main">
+		<h1>登录</h1>
+		<ul class="login-tab">
+			<li><a href="#account">账号密码登录</a></li>
+			<li><a href="#mobile">手机验证码登录</a></li>
+		</ul>
+		<div class="log_main" id="account">
+			<form method="post" action="/user/loginByAccount.action">
+				<fieldset>
+					<div class="fields">
+						<p class="row">
+							<input type="text" name="username" required="required" placeholder="请输入手机号" />
+						</p>
+						<p class="row">
+							<input type="password" name="password" required="required" placeholder="请输入密码" />
+						</p>
+					</div>
+				</fieldset>
+				<p><a href="#">忘记密码</a></p>
+				<p class="row">
+					<input type="submit" value="立即登录"/>
+				</p>
+			</form>
+		</div>
+		
+		<div class="log_main hide" id="mobile">
+			<form method="post" action="/user/loginByMobile.action">
+				<fieldset>
+					<div class="fields">
+						<p class="row">
+							<input type="text" name="mobilePhone" required="required" placeholder="请输入手机号" />
+							<button type="button" class="sms-btn">发送验证码</button>
+						</p>
+						<p class="row">
+							<input type="text" name="verificationCode" required="required" placeholder="请输入验证码" />
+						</p>
+					</div>
+				</fieldset>
+				<p><a href="#">忘记密码</a></p>
+				<p class="row">
+					<input type="submit" value="立即登录"/>
+				</p>
+			</form>
+		</div>
+	</main>
+	
+	<aside>
+		<section>
+			<p>还没有木木账号？</p>
+			<p><a href="register.html">立即注册</a></p>
+		</section>
+		<section>
+			<p>使用以下账号直接登录：</p>
+			<ul>
+				<li><a href="#"><img alt="微信" src="../img/微信.png" /></a></li>
+				<li><a href="#"><img alt="QQ" src="../img/QQ.png" /></a></li>
+				<li><a href="#"><img alt="微博" src="../img/微博.png" /></a></li>
+			</ul>
+		</section>
+		<section>
+			<img alt="APP二维码" src="../img/APP二维码.png" />
+			<p>[扫描下载木木APP]</p>
+		</section>
+	</aside>
+	
+	<footer>
+		<p><small>北京木木房地产经纪有限公司 版权所有 | 网络经营许可证 京ICP备12345678号-16  &copy;2019 mumu.com, all rights reserved.</small></p>
+	</footer>
+</body>
+</html>
