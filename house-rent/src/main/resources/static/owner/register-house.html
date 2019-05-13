@@ -10,8 +10,72 @@
 			<a href="#"><img src="../img/logo.png" width=100 height=50 /></a>
 		</div>
 	</header>
-	<main>
-	
+	<main role="main">
+		<h1>登记房产</h1>
+		<ul class="tab">
+			<li><a href="#photo">拍照输入</a></li>
+			<li><a href="#manual">手动输入</a></li>
+		</ul>
+		<div id="photo">
+			<form method="post" action="/owner/registerHouseByPhoto.action" enctype="multipart/form-data">
+				<p class="row">
+					<label for="pic">请上传您要登记的房产证照片：</label>
+					<input type="file" name="pic" id="pic" accept="image/jpeg" multiple="multiple" />
+				</p>
+				<p class="row">
+					<input type="submit" value="立即登记"/>
+				</p>
+			</form>
+		</div>
+		<div id="manual">
+			<form method="post" action="/owner/registerHouseByManual.action">
+				<p class="row">
+					<label for="city">小区所在城市：</label>
+					<select id="city" name="city">
+						<option value="beijing">北京</option>
+						<option value="shanghai">上海</option>
+						<option value="guangzhou">广州</option>
+						<option value="shenzhen">深圳</option>
+					</select>
+				</p>
+				<p class="row">
+					<label for="district">市/区/县：</label>
+					<select id="district" name="district">
+						<option value="dongcheng">东城</option>
+						<option value="xicheng">西城</option>
+						<option value="haidian">海淀</option>
+						<option value="chaoyang">朝阳</option>
+					</select>
+				</p>
+				<p class="row">
+					<label for="sub-district">街道办事处/乡/镇：</label>
+					<select id="sub-district" name="subdistrict">
+						<option value="tiangongyuan">天宫院</option>
+					</select>
+				</p>
+				<p class="row">
+					<input type="text" id="road" name="road" required="required" placeholder="请输入道路名称" />
+					<label for="road">路/街/道，</label>
+					<input type="text" id="courtyard-no" name="courtyardNo" required="required" placeholder="请输入院号" />
+					<label for="courtyard-no">号院</label>
+				</p>
+				<p class="row">
+					<input type="text" id="community" name="community" placeholder="请输入小区名称" />
+					<label for="community">小区</label>
+				</p>
+				<p class="row">
+					<input type="text" id="building-no" name="buildingNo" required="required" placeholder="请输入楼号" />
+					<label for="building-no">号楼</label>
+					<input type="text" id="unit-no" name="UnitNo" required="required" placeholder="请输入单元号" />
+					<label for="unit-no">单元</label>
+					<input type="text" id="house-no" name="houseNo" required="required" placeholder="请输入房间号" />
+					<label for="house-no">号房</label>
+				</p>
+				<p class="row">
+					<input type="submit" value="立即登记"/>
+				</p>
+			</form>
+		</div>
 	</main>
 	<footer>
 		<p><small>北京木木房地产经纪有限公司 版权所有 | 网络经营许可证 京ICP备12345678号-16  &copy;2019 mumu.com, all rights reserved.</small></p>
