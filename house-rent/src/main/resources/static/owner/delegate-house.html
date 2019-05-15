@@ -15,17 +15,43 @@
 		<form method="post" action="delegateHouse.action">
 			<fieldset>
 				<h2>对租金的要求</h2>
+				<p>
+					<label for="">每个月租金不少于：</label>
+					<input type="text" id="minimum-income" name="minimumIncome" required />元
+				</p>
 			</fieldset>
 			<fieldset>
 				<h2>对租赁形式的要求</h2>
+				<p>
+					<input type="checkbox" id="whole-rent" name="rentTypes" value="0" checked />
+					<label for="whole-rent">整租</label>
+					<input type="checkbox" id="shared-rent" name="rentTypes" value="1" checked />
+					<label for="shared-rent">合租</label>
+				</p>
+			</fieldset>
+			<fieldset>
+				<h2>委托形式</h2>
+				<p>
+					<input type="radio" id="delegate-manually" name="delegateType" value="0" />
+					<label for="delegate-manually">我来指定房管</label>
+					<input type="radio" id="delegate-automatically" name="delegateType" value="1" checked />
+					<label for="delegate-manually">系统自动分配房管</label>
+				</p>
 			</fieldset>
 			<fieldset>
 				<h2>对租客的要求</h2>
+				<p>
+					<input type="checkbox" id="smoking" name="requirements" value="0" checked />
+					<label for="whole-rent">允许吸烟</label>
+					<input type="checkbox" id="cooking" name="requirements" value="1" checked />
+					<label for="shared-rent">允许做饭</label>
+					<input type="checkbox" id="pets" name="requirements" value="2" checked />
+					<label for="shared-rent">允许养宠物</label>
+					<input type="checkbox" id="party" name="requirements" value="3" checked />
+					<label for="shared-rent">允许聚会</label>
+				</p>
 			</fieldset>
-			<fieldset>
-				<h2>对房管的要求：指定房管、系统分配房管抢单</h2>
-			</fieldset>
-			<input type="submit" />
+			<input type="submit" value="立即委托" />
 		</form>
 	</main>
 	<footer>
