@@ -12,13 +12,92 @@
 	</header>
 	
 	<main role="main">
-		<p>身份信息</p>
-		<p>教育信息</p>
-		<p>联络信息：住址、手机、QQ、微信、邮箱</p>
-		<p>工作经历</p>
-		<p>家庭信息</p>
-		<p>性格爱好</p>
-		<p>生活习惯</p>
+		<h1>申请成为房管</h1>
+		<form method="post" action="applyForAgent.action">
+			<p>同意《平台服务协议》</p>
+			<fieldset>
+				<legend>身份信息</legend>
+				<label for="name">姓名：</label>
+				<input type="text" id="name" name="name" required />
+				<label for="sex">性别：</label>
+				<input type="radio" id="male" name="sex" checked /><label for="male">男</label>
+				<input type="radio" id="female" name="sex" /><label for="female">女</label>
+				<label for="ethnicity">民族：</label>
+				<select id="ethnicity" name="ethnicity">
+					<option value="0" selected>汉族</option>
+				</select>
+				<label for="birthday">出生日期：</label>
+				<input type="date" id="birthday" name="birthday" required />
+				<label for="address">住址：</label>
+				<input type="text" id="address" name="address" required />
+				<label for="id-no">公民身份号码：</label>
+				<input type="text" id="id-no" name="idNo" required />
+			</fieldset>
+			<fieldset>
+				<legend>联络信息</legend>
+				<label for="current-address">现住址：</label>
+				<input type="text" id="current_address" name="currentAddress" required />
+				<label for="mobile-phone">手机：</label>
+				<input type="text" id="mobile-phone" name="mobilePhone" required />
+				<label for="email">邮箱：</label>
+				<input type="text" id="email" name="email" />
+				<label for="qq">QQ：</label>
+				<input type="text" id="qq" name="qq" />
+				<label for="micro-msg">微信：</label>
+				<input type="text" id="micro-msg" name="microMsg" />
+			</fieldset>
+			<fieldset>
+				<legend>教育经历</legend>
+				<ul>
+					<li>
+						<label for="edu-start-date">起始日期：</label>
+						<input type="date" id="edu-start-date" name="eduStartDate" required />
+						<label for="edu-end-date">结束日期：</label>
+						<input type="date" id="edu-end-date" name="eduEndDate" required />
+						<label for="school">学校：</label>
+						<input type="text" id="school" name="school" required />
+						<label for="major">专业：</label>
+						<input type="text" id="major" name="major" required />
+						<label for="education">学历：</label>
+						<input type="text" id="education" name="education" required />
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>工作经历</legend>
+				<ul>
+					<li>
+						<label for="work-start-date">起始日期：</label>
+						<input type="date" id="work-start-date" name="workStartDate" required />
+						<label for="work-end-date">结束日期：</label>
+						<input type="date" id="work-end-date" name="workEndDate" required />
+						<label for="company">公司/单位：</label>
+						<input type="text" id="company" name="company" required />
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>家庭信息</legend>
+				<ul>
+					<li>
+						<label for="relationship">关系：</label>
+						<input type="text" id="relationship" name="relationship" required />
+						<label for="r-name">姓名：</label>
+						<input type="text" id="r-name" name="rName" required />
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>性格爱好</legend>
+				<textarea id="personality" name="personality" rows="5" cols="40"></textarea>
+			</fieldset>
+			<fieldset>
+				<legend>生活习惯</legend>
+				<textarea id="habits" name="habits" rows="5" cols="40"></textarea>
+			</fieldset>
+			
+			<input type="submit" value="立即申请" />
+		</form>
 	</main>
 	
 	<footer>

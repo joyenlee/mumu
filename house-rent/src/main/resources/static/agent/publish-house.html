@@ -12,6 +12,79 @@
 	</header>
 	
 	<main role="main">
+		<h1>金科嘉苑4-1-1901招租</h1>
+		
+		<form method="post" action="publishHouse.action">
+			<fieldset>
+				<h2>地址信息</h2>
+				<label for="address">地址：</label>
+				<input type="text" id="address" name="address" required value="北京市大兴区天宫院街道永旺路1号院4-1-1901"/>
+				<label for="community">小区：</label>
+				<input type="text" id="community" name="community" required value="金科嘉苑" />
+			</fieldset>
+			<fieldset>
+				<h2>租赁信息</h2>
+				<label for="">租金：</label>
+				<input type="text" id="price" name="price" required />元/月
+				<label>方式：</label>
+				<input type="radio" id="whole-rent" name="rentType" value="0" checked />
+				<label for="whole-rent">整租</label>
+				<input type="radio" id="shared-rent" name="rentType" value="1" />
+				<label for="shared-rent">合租</label>
+				<p>无押金、中介费是租金的25%</p>
+			</fieldset>
+			<fieldset>
+				<h2>基本信息</h2>
+				<label for="floor">第</label>
+				<input type="text" id="floor" name="floor" size="2" required />楼/
+				<label for="floors">共</label>
+				<input type="text" id="floors" name="floors" size="2" required />楼
+				
+				<label for="age">房产年龄：</label>
+				<input type="text" id="age" name="age" required />年
+				<label for="area">面积：</label>
+				<input type="text" id="area" name="area" required />平米
+				<label for="orientation">朝向：</label>
+				<select id="orientation" name="orientation" required>
+					<option value="0" selected>东</option>
+					<option value="1">东南</option>
+					<option value="2">南</option>
+					<option value="3">西南</option>
+					<option value="4">西</option>
+					<option value="5">西北</option>
+					<option value="6">北</option>
+					<option value="7">东北</option>
+				</select>
+				<input type="checkbox" id="through" name="through" />
+				<label for="through">通透</label>
+				<label for="bedroom">卧室：</label>
+				<input type="text" id="bedroom" name="bedroom" required />个
+				<label for="drawingroom">客厅：</label>
+				<input type="text" id="drawingroom" name="drawingroom" required />个
+				<label for="diningroom">餐厅：</label>
+				<input type="text" id="diningroom" name="diningroom" required />个
+				<label for="kitchen">厨房：</label>
+				<input type="text" id="kitchen" name="kitchen" required />个
+				<label for="bathroom">卫生间：</label>
+				<input type="text" id="bathroom" name="bathroom" required />个
+				<label for="balcony">阳台：</label>
+				<input type="text" id="balcony" name="balcony" required />个
+			</fieldset>
+			<fieldset>
+				<h2>对租客的要求</h2>
+				<p>
+					<input type="checkbox" id="smoking" name="requirements" value="0" checked />
+					<label for="whole-rent">允许吸烟</label>
+					<input type="checkbox" id="cooking" name="requirements" value="1" checked />
+					<label for="shared-rent">允许做饭</label>
+					<input type="checkbox" id="pets" name="requirements" value="2" checked />
+					<label for="shared-rent">允许养宠物</label>
+					<input type="checkbox" id="party" name="requirements" value="3" checked />
+					<label for="shared-rent">允许聚会</label>
+				</p>
+			</fieldset>
+			<input type="submit" value="立即委托" />
+		</form>
 	</main>
 	
 	<footer>
